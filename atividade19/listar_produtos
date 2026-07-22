@@ -1,0 +1,14 @@
+<?php 
+//incluindo o arquivo de conexão do banco de dados
+include "banco19.php";
+//sql listar os arquivos do banco de dados
+$sql = "SELECT * FROM produtos";
+//guardar na variável resultado a consulta do banco de dados
+$resultado = $conexao->query($sql);
+//iremso usar um laço de repetição while(enquanto)
+while ($produto = $resultado->fetch_assoc()) {
+echo "Nome do Produto: ". $produto['nome']. "<br>";
+echo "Quantidade: ". $produto['idade']. "<br>";
+echo "Preço: ". $produto['email']. "<br>";
+}
+?>

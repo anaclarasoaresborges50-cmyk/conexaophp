@@ -1,0 +1,14 @@
+<?php 
+include "banco19.php";
+$nome_do_produto = $_POST['nome do produto'];
+$quantidade = $_POST['quantidade'];
+$preco = $_POST['preço'];
+$sql = "INSERT INTO produtos (Nome do Produto, Quantidade, preço) VALUES('$nome_do_produto', '$quantidade', '$preco')";
+
+if ($conexao->query($sql)) { 
+echo "Dados salvos com sucesso!";
+ }
+ else {
+echo "Erro ao salvar os dados!";
+ }
+?>
